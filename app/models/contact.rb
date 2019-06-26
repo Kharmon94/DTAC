@@ -2,12 +2,19 @@ class Contact < MailForm::Base
   attribute :first_name, :validate => true
   attribute :last_name, :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :description,   :validate => true
+  attribute :address,   :validate => true
+  attribute :city,   :validate => true
+  attribute :zip,   :validate => true
+  attribute :bed,   :validate => true
+  attribute :bath,   :validate => true
+  attribute :square_feet,   :validate => true
+  attribute :special_services,   :validate => true
+  attribute :service_type,   :validate => true
 
   def headers
     {
       :subject => "Support Message",
-      :to => "expgcapital@gmail.com",
+      :to => "thronetechnology@gmail.com",
       :from => %("#{first_name}" <#{email}>)
     }
   end

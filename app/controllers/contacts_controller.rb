@@ -37,7 +37,7 @@ class ContactsController < InheritedResources::Base
   private
 
     def contact_params
-      params.require(:contact).permit(:first_name, :last_name, :email, :description)
+      params.require(:contact).permit(:first_name, :last_name, :email, :address, :city, :zip, :bed, :bath, :square_feet, :special_services, :service_type)
     end
 
 end
