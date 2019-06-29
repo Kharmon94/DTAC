@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- <#%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png' %> -->
+    <%= favicon_link_tag asset_path('Logo-3-5.jpg'), :rel => 'icon', :type =>  'image/png' %>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -64,38 +64,8 @@
 
   <body>
 
-    <header style="background-color:  #3cbceb">
-
-          <nav id="nav" style="margin-bottom: 5%; background-color: white" data-aos="fade-down" data-aos-duration="2500">
-
-                <div class="nav-wrapper">
-                <!--   <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><#%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 50px; height: auto; margin: 11%;' %></a> -->
-                  <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="width: 150%; height: auto;">menu</i></a>
-                  <ul class="right hide-on-med-and-down" style="margin-top: 1.5%">
-
-                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
-
-                  </ul>
-                </div>
-          
-
-                <ul class="sidenav" id="mobile-demo">
-                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li> 
-
-                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
-                </ul>
-
-          </nav>
-
-     
-    </header>
-
+    <%= render 'partials/nav' %>
+  
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
       

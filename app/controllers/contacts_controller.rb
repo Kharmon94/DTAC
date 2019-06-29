@@ -27,9 +27,9 @@ class ContactsController < InheritedResources::Base
 	    @contact.request = request
 	    if @contact.deliver
 	      flash.now[:error] = nil
-	  redirect_to root_path, notice: 'Message sent successfully'
+	  redirect_to root_path, notice: 'Booking sent we will reach you soon, Thank You!!'
 	    else
-	      flash.now[:error] = 'Cannot send message'
+	      flash.now[:error] = 'Oops there has been a problem, Please contact us on our social media!'
 	      render :new
 	    end
 	 end

@@ -6,12 +6,29 @@
   <body>
     <h1>Support</h1>
     <p>
-      From: <%= @first_name %> <%= @last_name %>
-    <p>
+      From: <%= @first_name %> <%= @last_name %> (<%= @email %>)
+    </p>
       <hr>
       <h3><strong>Message:</strong></h3>
     <p>
-      <%= @description %>
+      <%= @address %>, <%= @city %>, <%= @zip %>
+    </p>
+    <hr>
+    <h3><strong>SPACE:</strong></h3>
+    <p>
+      BEDS: <%= @bed %>
+      BATHS: <%= @bath %>
+      SQUARE FEET: <%= @square_feet %>
+    </p>
+    <hr>
+    <h3><strong>SPECIAL SERVICES:</strong></h3>
+    <p>
+       <%= @special_services %>
+    </p>
+    <hr>
+    <h3><strong>SERVICE TYPE:</strong></h3>
+    <p>
+       <%= @service_type %>
     </p>
   
   </body>
