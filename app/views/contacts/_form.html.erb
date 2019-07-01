@@ -1,68 +1,141 @@
-  <div class="container">
+  <%= form_with(model: contact, local: true) do |f| %>
+    <% if contact.errors.any? %>
+  <div id="error_explanation">
+            <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
-    <div class="row" align="center">
-      
-      <div class="col s12" align="center">
-                  <%= form_with(model: contact, local: true) do |form| %>
-                    <% if contact.errors.any? %>
-                  <div id="error_explanation">
-                            <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-                            <ul>
-                            <% contact.errors.full_messages.each do |message| %>
-                              <li><%= message %></li>
-                            <% end %>
-                            </ul>
-                        
-                        <% end %>
-                        <div class="form-group" id="contactform">
-
-                              <div class="row" style="margin: 5px;">
-
-                                    <div class="col s4">
-                                        <div>
-                                          <strong><%= form.label :first_name, style: 'color: white;' %></strong><br>
-                                          <%= form.text_field :first_name, class: 'form-control', style: 'color: white;' %>
-                                        </div>
-                                    </div>
-
-                                    <div class="col s4">
-                                        <div class="field">
-                                          <strong><%= form.label :last_name, style: 'color: white;' %></strong><br>
-                                          <%= form.text_field :last_name, class: 'form-control', style: 'color: white;' %>
-                                        </div>
-                                    </div>
-
-                                  <div class="col s4">
-                                      <div class="field">
-                                        <strong><%= form.label :email, style: 'color: white;' %></strong><br>
-                                        <%= form.email_field :email, class: 'form-control', style: 'color: white;' %>
-                                      </div>
-                                  </div>
-                                  
-                              </div>
-
-                                <div class="row" style="margin-top: 1%; margin: 5px;">
-                                    <div class="field">
-                                      <strong><%= form.label :description, style: 'color: white;' %></strong><br>
-                                      <%= form.text_area :description, :style => 'width: 100%; height: 120px; color: white;', :class => 'form-control' %>
-                                    </div> 
-                                </div>
-
-
-                                <div align="center" class="row" style="margin-top: 3%;">
-                                  <%= form.submit "Send", class: "btn waves-effect waves-light", :style => "background-color: white; color: black; margin-top: 10px; width:23%;" %>
-                                </div>
-                      </div>
-
-              <% end %>
+            <ul>
+            <% contact.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+  </div>   
+    <% end %>
+          
+          <div class="row" style="margin-bottom: 15%">
+            <div class="col s7 left-align">
+              <div class="col 3 left-align" style="margin-right: 5%">
+                <div>
+                  <strong><%= f.label :first_name, style: 'color: white;' %></strong><br>
+                  <%= f.text_field :first_name, class: 'form-control', style: 'color: white;' %>
+                </div>
+                <div>
+                  <strong><%= f.label :last_name, style: 'color: white;' %></strong><br>
+                  <%= f.text_field :last_name, class: 'form-control', style: 'color: white;' %>
+                </div>
+                <div>
+                  <strong><%= f.label :email, style: 'color: white;' %></strong><br>
+                  <%= f.email_field :email, class: 'form-control', style: 'color: white;' %>
+                </div>
               </div>
 
-      </div>
+              <div class="col 3" style="border-left: solid; border-color: white; border-width: 2px; border-radius: 2px;">
+                <div>
+                  <strong><%= f.label :address, style: 'color: white;' %></strong><br>
+                  <%= f.text_field :address, class: 'form-control', style: 'color: white;' %>
+                </div>
+                <div>
+                  <strong><%= f.label :city, style: 'color: white;' %></strong><br>
+                  <%= f.text_field :city, class: 'form-control', style: 'color: white;' %>
+                </div>
+                <div>
+                  <strong><%= f.label :zip, style: 'color: white;' %></strong><br>
+                  <%= f.text_field :zip, class: 'form-control', style: 'color: white;' %>
+                </div>
+              </div>
+            </div>
 
-    </div>
-    
-  </div>
+            <div class="col s5 right-align">
+              <h4>
+                Personal Information
+              </h4>
+              <h6>Let us know a little about you!</h6>
+              <p style="color: #4ba931"><i>*United States customers only</i></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s5">
+              <h4>
+                Space Information
+              </h4>
+              <h6>
+                Tell us about the space!
+              </h6>
+              <p style="color: #4ba931"><i>*Additional fees may apply</i></p>
+            </div>
+            <div class="col s7">
+                <div class=" row center-align" style="margin-bottom: 5%; border-bottom: solid; border-width: 0.5px; border-color: white; padding-bottom: 5%">
+                    <h5>
+                      Beds:
+                    </h5>
+                    <%= f.range_field :bed, class: 'slide', id: 'myRange', style: 'color: white;', min: 1, max: 10, value: 0  %>
+                    <h6 id="demo"></h6>
+                </div>
+                <div class=" row center-align" style="margin-bottom: 5%; border-bottom: solid; border-width: 0.5px; border-color: white; padding-bottom: 5%">
+                    <h5>
+                      Baths:
+                    </h5>
+                    <%= f.range_field :bath, class: 'slide', id: 'myRange2', style: 'color: white;', min: 1, max: 10, value: 0  %>
+                    <h6 id="demo2"></h6>
+                </div>
+                <div class=" row center-align" style="margin-bottom: 5%; border-bottom: solid; border-width: 0.5px; border-color: white; padding-bottom: 5%">
+                    <h5>
+                      Square Feet:
+                    </h5>
+                    <%= f.range_field :square_feet, class: 'slide', id: 'myRange3', style: 'color: white;', min: 100, max: 10000, value: 0, step: '100'  %>
+                    <h6 id="demo3"></h6>
+                </div>
+                <%= hidden_field_tag :special_services, params[:special_services] %>
+                <%= hidden_field_tag :service_type, params[:service_type] %>
+                <div class="input-field row">
+                    <h5>
+                      Special Services:
+                    </h5>
+
+             <!--        <#%= f.select :special_services, ['None', 'Windows', 'Refrigerator', 'Oven', 'Carpet Shampoo', 'Carpet Steam'] %> -->
+
+                    <div  class="input-field s6">
+                      <select name="special_services_id" id="special_services_id" class="browser-default">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">None</option>
+                        <option value="2">Windows</option>
+                        <option value="3">Refrigerator</option>
+                        <option value="3">Oven</option>
+                        <option value="3">Carpet Shampoo</option>
+                        <option value="3">Carpet Steam</option>
+
+                      </select>
+                    </div>
+                </div>
+                <div class="input-field row">
+                    <h5>
+                      Service Type:
+                    </h5>
+
+                    <!-- <#%= f.select :service_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %> -->
+
+                    <div  class="input-field s6">
+                      <select name="service_type_id" id="service_type_id" class="browser-default">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">One Time</option>
+                        <option value="2">Weekly</option>
+                        <option value="3">Bi-Weekly</option>
+                        <option value="3">Monthly</option>
+                      </select>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+
+
+          <div align="center" class="row" style="margin-top: 3%;">
+            <%= f.submit "Send", class: "btn waves-effect waves-light", :style => "background-color: white; color: black; margin-top: 10px; width:23%;" %>
+          </div>
+     
+  
+<% end %>
+              
 
 
 
