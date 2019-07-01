@@ -57,18 +57,22 @@
 	  output_three.innerHTML = this.value;
 	}
 
-	var special = document.getElementById("special_services_id")
-	var type = document.getElementById("service_type_id")
+	// var special = document.getElementById("special_services_id")
+	// var type = document.getElementById("service_type_id")
 
-	$(document).ready(function () {
-	  $('input[type=hidden]#special_services').val(special);
-	  $('input[type=hidden]#service_type').val(type);
-	});
+	// $(document).ready(function () {
+	//   $('input[type=hidden]#special_services').val(special);
+	//   $('input[type=hidden]#service_type').val(type);
+	// });
 
-
-
-
-
-
-
+	// function setHiddenValue() {
+	//   // Get the value from the select tag
+	//   var selectValue = $('select#special_services_id').val();
+	//   // Set the hidden tag's value to the select tag value we got in the last line
+	//   $('input[type=hidden]#special_services').val(selectValue);
+	// }
+	
+	// $(document).ready(function () {
+	//   $('select#special_services_id').on('change', setHiddenValue());
+	// });
  });

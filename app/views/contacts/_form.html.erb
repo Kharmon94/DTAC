@@ -85,44 +85,22 @@
                     <%= f.range_field :square_feet, class: 'slide', id: 'myRange3', style: 'color: white;', min: 100, max: 10000, value: 0, step: '100'  %>
                     <h6 id="demo3"></h6>
                 </div>
-                <%= hidden_field_tag :special_services, params[:special_services] %>
-                <%= hidden_field_tag :service_type, params[:service_type] %>
+
                 <div class="input-field row">
                     <h5>
                       Special Services:
                     </h5>
 
-             <!--        <#%= f.select :special_services, ['None', 'Windows', 'Refrigerator', 'Oven', 'Carpet Shampoo', 'Carpet Steam'] %> -->
+                    <%= f.select :special_services, ['None', 'Windows', 'Refrigerator', 'Oven', 'Carpet Shampoo', 'Carpet Steam'] %>
 
-                    <div  class="input-field s6">
-                      <select name="special_services_id" id="special_services_id" class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">None</option>
-                        <option value="2">Windows</option>
-                        <option value="3">Refrigerator</option>
-                        <option value="3">Oven</option>
-                        <option value="3">Carpet Shampoo</option>
-                        <option value="3">Carpet Steam</option>
-
-                      </select>
-                    </div>
                 </div>
                 <div class="input-field row">
                     <h5>
                       Service Type:
                     </h5>
 
-                    <!-- <#%= f.select :service_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %> -->
+                    <%= f.select :service_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %>
 
-                    <div  class="input-field s6">
-                      <select name="service_type_id" id="service_type_id" class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">One Time</option>
-                        <option value="2">Weekly</option>
-                        <option value="3">Bi-Weekly</option>
-                        <option value="3">Monthly</option>
-                      </select>
-                    </div>
                 </div>
 
             </div>

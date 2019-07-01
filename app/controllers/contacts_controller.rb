@@ -2,6 +2,7 @@ class ContactsController < InheritedResources::Base
 
 	def new
 		@contact = Contact.new
+		@special = params[:special_services]
 	end
 
 	# def create
