@@ -43,6 +43,7 @@ gem 'cancancan', '~> 2.0'
 gem 'materialize-sass'
 gem 'mini_racer'
 gem "font-awesome-rails"
+gem 'jquery-rails'
 
 # Images
 gem 'mini_magick', '~> 4.8'

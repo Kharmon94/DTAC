@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require jquery
 //= require materialize
 //= require materialize-sprockets
 //= require turbolinks
@@ -40,10 +41,10 @@
 	var output_two = document.getElementById("demo2");	
 	var slider_three = document.getElementById("myRange3");
 	var output_three = document.getElementById("demo3");	
-	output.innerHTML = slider.value; // Display the default slider value
+	output.innerHTML = slider.value; 
 	output_two.innerHTML = slider.value;
 	output_three.innerHTML = slider.value;
-	// Update the current slider value (each time you drag the slider handle)
+	
 	slider.oninput = function() {
 	  output.innerHTML = this.value;
 	}
@@ -57,22 +58,4 @@
 	  output_three.innerHTML = this.value;
 	}
 
-	// var special = document.getElementById("special_services_id")
-	// var type = document.getElementById("service_type_id")
-
-	// $(document).ready(function () {
-	//   $('input[type=hidden]#special_services').val(special);
-	//   $('input[type=hidden]#service_type').val(type);
-	// });
-
-	// function setHiddenValue() {
-	//   // Get the value from the select tag
-	//   var selectValue = $('select#special_services_id').val();
-	//   // Set the hidden tag's value to the select tag value we got in the last line
-	//   $('input[type=hidden]#special_services').val(selectValue);
-	// }
-	
-	// $(document).ready(function () {
-	//   $('select#special_services_id').on('change', setHiddenValue());
-	// });
  });

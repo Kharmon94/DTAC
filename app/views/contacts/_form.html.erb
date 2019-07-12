@@ -12,7 +12,7 @@
     <% end %>
           
           <div class="row" style="margin-bottom: 15%">
-            <div class="col s7 left-align">
+            <div class="col s7 left-align" data-aos="fade-right" data-aos-duration="2500">
               <div class="col 3 left-align" style="margin-right: 5%">
                 <div>
                   <strong><%= f.label :first_name, style: 'color: white;' %></strong><br>
@@ -44,7 +44,7 @@
               </div>
             </div>
 
-            <div class="col s5 right-align">
+            <div class="col s5 right-align" data-aos="fade-left" data-aos-duration="2500">
               <h4>
                 Personal Information
               </h4>
@@ -54,7 +54,7 @@
           </div>
 
           <div class="row">
-            <div class="col s5">
+            <div class="col s5" data-aos="fade-right" data-aos-duration="2500">
               <h4>
                 Space Information
               </h4>
@@ -64,50 +64,64 @@
               <p style="color: #4ba931"><i>*Additional fees may apply</i></p>
             </div>
             <div class="col s7">
-                <div class=" row center-align" style="margin-bottom: 5%; border-bottom: solid; border-width: 0.5px; border-color: white; padding-bottom: 5%">
+                <div class=" row center-align" style="margin-bottom: 10%; padding-bottom: 5%" data-aos="fade-up" data-aos-duration="2500">
                     <h5>
                       Beds:
                     </h5>
                     <%= f.range_field :bed, class: 'slide', id: 'myRange', style: 'color: white;', min: 1, max: 10, value: 0  %>
-                    <h6 id="demo"></h6>
+                    <h5 id="demo"></h5>
                 </div>
-                <div class=" row center-align" style="margin-bottom: 5%; border-bottom: solid; border-width: 0.5px; border-color: white; padding-bottom: 5%">
+                <div class=" row center-align" style="margin-bottom: 10%; padding-bottom: 5%" data-aos="fade-up" data-aos-duration="2500">
                     <h5>
                       Baths:
                     </h5>
                     <%= f.range_field :bath, class: 'slide', id: 'myRange2', style: 'color: white;', min: 1, max: 10, value: 0  %>
-                    <h6 id="demo2"></h6>
+                    <h5 id="demo2"></h5>
                 </div>
-                <div class=" row center-align" style="margin-bottom: 5%; border-bottom: solid; border-width: 0.5px; border-color: white; padding-bottom: 5%">
+                <div class=" row center-align" style="margin-bottom: 10%; padding-bottom: 5%" data-aos="fade-up" data-aos-duration="2500">
                     <h5>
                       Square Feet:
                     </h5>
                     <%= f.range_field :square_feet, class: 'slide', id: 'myRange3', style: 'color: white;', min: 100, max: 10000, value: 0, step: '100'  %>
-                    <h6 id="demo3"></h6>
-                </div>
-
-                <div class="input-field row">
-                    <h5>
-                      Special Services:
-                    </h5>
-
-                    <%= f.select :special_services, ['None', 'Windows', 'Refrigerator', 'Oven', 'Carpet Shampoo', 'Carpet Steam'] %>
-
-                </div>
-                <div class="input-field row">
-                    <h5>
-                      Service Type:
-                    </h5>
-
-                    <%= f.select :service_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %>
-
+                    <h5 id="demo3"></h5>
                 </div>
 
             </div>
           </div>
 
 
-          <div align="center" class="row" style="margin-top: 3%;">
+          <div class="input-field row" style="margin-top: 10%">
+            
+              <div class="col s6" data-aos="fade-right" data-aos-duration="2500">
+                <h4>
+                  Special Services:
+                </h4>
+                <h6>
+                  Is there any special tasks you would like done? (Windows, Oven, Carpet etc...)
+                </h6>
+              </div>
+               <div class="col s6" style="margin-top: 5%" data-aos="fade-left" data-aos-duration="2500">
+                <%= f.select :special_services, ['None', 'Windows', 'Refrigerator', 'Oven', 'Carpet Shampoo', 'Carpet Steam'] %>
+             </div> 
+          </div>
+
+          <div class="input-field row" style="margin-top: 10%">
+            
+              <div class="col s6" data-aos="fade-right" data-aos-duration="2500">
+                <h4>
+                  Service Type:
+                </h4>
+                <h6>
+                  How often would you need our services?
+                </h6>
+              </div>
+              <div class="col s6" style="margin-top: 5%" data-aos="fade-left" data-aos-duration="2500">
+                <%= f.select :service_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %>
+              </div> 
+          </div>
+
+
+          <div align="center" class="row" style="margin-top: 15%; margin-bottom: 40%">
             <%= f.submit "Send", class: "btn waves-effect waves-light", :style => "background-color: white; color: black; margin-top: 10px; width:23%;" %>
           </div>
      
