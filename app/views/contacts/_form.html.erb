@@ -65,25 +65,44 @@
             </div>
             <div class="col s7">
                 <div class=" row center-align" style="margin-bottom: 10%; padding-bottom: 5%" data-aos="fade-up" data-aos-duration="2500">
-                    <h5>
-                      Beds:
-                    </h5>
-                    <%= f.range_field :bed, class: 'slide', id: 'myRange', style: 'color: white;', min: 1, max: 10, value: 0  %>
-                    <h5 id="demo"></h5>
+                    
+                    <div class="col s2" style="margin-right: 5">
+                       <h5>
+                        Beds:
+                      </h5> 
+                      <h3 id="demo"></h3>
+                    </div>
+                    <div class="col s5">
+                      <%= f.range_field :bed, class: 'slide', id: 'myRange', style: 'width: 350px', min: 1, max: 10, value: 0  %>
+                    </div>
+                    
+                    
                 </div>
                 <div class=" row center-align" style="margin-bottom: 10%; padding-bottom: 5%" data-aos="fade-up" data-aos-duration="2500">
+                  <div class="col s2" style="margin-right: 5">
                     <h5>
                       Baths:
                     </h5>
-                    <%= f.range_field :bath, class: 'slide', id: 'myRange2', style: 'color: white;', min: 1, max: 10, value: 0  %>
-                    <h5 id="demo2"></h5>
+                    <h3 id="demo2"></h3>
+                  </div>
+                  <div class="col s5">
+                    <%= f.range_field :bath, class: 'slide', id: 'myRange2', style: 'width: 350px', min: 1, max: 10, value: 0  %>
+                  </div>
+                    
                 </div>
                 <div class=" row center-align" style="margin-bottom: 10%; padding-bottom: 5%" data-aos="fade-up" data-aos-duration="2500">
+                  <div class="col s2" style="margin-right: 5">
                     <h5>
                       Square Feet:
                     </h5>
-                    <%= f.range_field :square_feet, class: 'slide', id: 'myRange3', style: 'color: white;', min: 100, max: 10000, value: 0, step: '100'  %>
-                    <h5 id="demo3"></h5>
+                    <h3 id="demo3"></h3>
+                  </div>
+                  <div class="col s5">
+                    <%= f.range_field :square_feet, class: 'slide', id: 'myRange3', style: 'width: 350px;', min: 100, max: 10000, value: 0, step: '100'  %>
+                  </div>
+                    
+                    
+                    
                 </div>
 
             </div>
