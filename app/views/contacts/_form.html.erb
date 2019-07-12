@@ -11,7 +11,7 @@
   </div>   
     <% end %>
           
-          <div class="row" style="margin-bottom: 15%">
+          <div class="row" style="margin-bottom: 20%">
             <div class="col s7 left-align" data-aos="fade-right" data-aos-duration="2500">
               <div class="col 3 left-align" style="margin-right: 5%">
                 <div>
@@ -25,6 +25,10 @@
                 <div>
                   <strong><%= f.label :email, style: 'color: white;' %></strong><br>
                   <%= f.email_field :email, class: 'form-control', style: 'color: white;' %>
+                </div>
+                <div>
+                  <strong><%= f.label :phone_number, style: 'color: white;' %></strong><br>
+                  <%= f.telephone_field :phone_number, class: 'form-control', style: 'color: white;' %>
                 </div>
               </div>
 

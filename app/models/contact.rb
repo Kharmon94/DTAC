@@ -5,6 +5,7 @@ class Contact < MailForm::Base
   attribute :address,   :validate => true
   attribute :city,   :validate => true
   attribute :zip,   :validate => true
+  attribute :phone_number,     :validate => true
   attribute :bed,   :validate => true
   attribute :bath,   :validate => true
   attribute :square_feet,   :validate => true
