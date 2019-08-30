@@ -11,13 +11,32 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Signika+Negative&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '510964779714492');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=510964779714492&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
 
 
    <style>
+    
       /* width */
       ::-webkit-scrollbar {
-          width: 10px;
+          width: 10px;Y
       }
 
       /* Track */
@@ -37,29 +56,30 @@
           background: white; 
       }
 
-       /* Fade in */
-        .animate-bottom {
-          position: relative;
-          -webkit-animation-name: animatebottom;
-          -webkit-animation-duration: 1s;
-          animation-name: animatebottom;
-          animation-duration: 1s
-        }
+     /* Fade in */
+      .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+      }
 
-        @-webkit-keyframes animatebottom {
-          from { bottom:-100px; opacity:0 } 
-          to { bottom:0px; opacity:1 }
-        }
+      @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+      }
 
-        @keyframes animatebottom { 
-          from{ bottom:-100px; opacity:0 } 
-          to{ bottom:0; opacity:1 }
-        }
+      @keyframes animatebottom { 
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0; opacity:1 }
+      }
 
-        #myDiv {
-          display: none;
-          text-align: center;
-        }
+      #myDiv {
+        display: none;
+        text-align: center;
+      }
+
     </style>
 
   </head>
@@ -70,14 +90,8 @@
   
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-      <script>
-         $(document).ready(function(){
-            $('select').formSelect();
-          });
-      </script>
 
-      
-  
+
     <%= yield %>
     <%= render 'partials/footer' %>
 
